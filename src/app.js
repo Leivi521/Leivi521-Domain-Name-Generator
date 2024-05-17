@@ -13,7 +13,7 @@ window.onload = function() {
 let pronoun = ["the", "our"];
 let adj = ["great", "big"];
 let noun = ["jogger", "racoon"];
-let end = [];
+let end = [".com", ".us"];
 
 function arraySelector(array) {
   let randomElement = array[Math.floor(Math.random() * array.length)];
@@ -22,10 +22,12 @@ function arraySelector(array) {
 function domainGenerator() {
   let domain =
     arraySelector(pronoun) +
-    " " +
+    "" +
     arraySelector(adj) +
-    " " +
+    "" +
     arraySelector(noun) +
-    " ";
+    "" +
+    arraySelector(end) +
+    "";
   return domain;
 }
