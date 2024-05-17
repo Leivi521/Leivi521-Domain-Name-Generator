@@ -6,16 +6,18 @@ import "./assets/img/rigo-baby.jpg";
 import "./assets/img/4geeks.ico";
 
 window.onload = function() {
+  document.getElementById("domain").innerHTML = domainGenerator();
   console.log("Hello Rigo from the console!");
 };
 
 let pronoun = ["the", "our"];
 let adj = ["great", "big"];
 let noun = ["jogger", "racoon"];
+let end = [];
 
 function arraySelector(array) {
-  let randomelement = array[Math.floor(Math.random() * array.length)];
-  return randomelement;
+  let randomElement = array[Math.floor(Math.random() * array.length)];
+  return randomElement;
 }
 function domainGenerator() {
   let domain =
@@ -26,6 +28,4 @@ function domainGenerator() {
     arraySelector(noun) +
     " ";
   return domain;
-
-document.getElementById(domain).textContent = domainGenerator();
-};
+}
